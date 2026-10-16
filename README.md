@@ -51,3 +51,10 @@ the latest sample, the EMA tracks it with `alpha = 1`.
 Float comparisons in your own code should use a tolerance — incremental
 arithmetic and the EMA recurrence both accumulate rounding error. The tests in
 this repo use a relative tolerance of `1e-9`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
