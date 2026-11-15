@@ -1,6 +1,6 @@
 {
   "name": "moving-average",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "warm-up-aware simple and exponential moving averages",
   "type": "module",
   "main": "src/index.js",
